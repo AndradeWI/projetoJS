@@ -1,0 +1,51 @@
+/* // Projeto final da disciplina Linguagem de Script
+  // Equipe: Aluisio, Alexandre, Rosemberg, Wanderson Andrade
+ // data: 29/03/2016
+// Professor: Daniel  */
+
+*{ margin: 0; padding: 20 }
+
+
+#form1{
+	padding-top: 80px;
+	color: gray;
+	
+}
+#form2{
+	padding-top: 20px;
+	color: gray;
+}
+.text{
+	color: red;
+}
+
+legend{
+	text-align: center;
+	font-weight: bold;
+}
+label{
+	color: gray;
+}
+
+.cartao {
+  width: 80px;
+  max-height: 80px;
+}
+#num_cartao{
+	display: inline-block;
+	width: 70%;
+}
+
+#input_nome{ margin-left: 17px; }
+
+#input_rua{ margin-left: 31px; }
+
+#input_numero{ margin-left: 4px; }
+
+#input_cep{ margin-left: 31px; }
+
+#input_data{ margin-left: 26px; }
+
+.icone{ width: 50px; height: 50px; margin-top: 10px; margin-left: 20px;}
+
+

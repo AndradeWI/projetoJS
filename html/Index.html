@@ -1,0 +1,216 @@
+<!-- // Projeto final da disciplina Linguagem de Script
+    // Equipe: Aluisio, Alexandre, Rosemberg, Wanderson Andrade
+   // data: 29/03/2016
+  // Professor: Daniel -->
+ <!DOCTYPE html>
+<html lang="pt">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+    <meta name="Projeto site de JavaScript" content="">
+    <meta name="Alexandre, CFO, Chapeuzin" content="">
+    <link rel="icon" href="../imagens/favicon.ico">
+
+    <script src="../js/jquery-1.6.4.min.js"></script>
+     <script src="../js/jquery-2.1.4.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.8.4/moment.min.js"></script>
+    <script src="../js/jquery.rss.js"></script>
+    <link href="../css/feed.css" rel="stylesheet">
+    <script src="../js/feed1.js"></script>
+
+          <title>Agência de viagens "Paraíso dos Sonhos"</title>
+
+    <script src="https://code.jquery.com/jquery-1.11.3.js" type="text/javascript"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    <!-- Bootstrap core CSS -->
+    <link href="http://getbootstrap.com/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- IE10 resolver bug de interface desktop Windows 8  -->
+    <link href="http://getbootstrap.com/assets/css/ie10-viewport-bug-workaround.css" rel="stylesheet">
+    <script src="http://getbootstrap.com/assets/js/ie-emulation-modes-warning.js"></script>
+    <!-- customização de estilos para o template -->
+    <link href="http://getbootstrap.com/examples/carousel/carousel.css" rel="stylesheet">
+
+
+
+  </head>
+<!-- NAVBAR
+================================================== -->
+  <body>
+    <div class="navbar-wrapper">
+      <div class="container">
+
+        <nav class="navbar navbar-inverse navbar-fixed-top">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="#">Agência Paraíso</a>
+            </div>
+            <div id="navbar" class="navbar-collapse collapse">
+              <ul class="nav navbar-nav">
+                <li class="active"><a href="#">Home</a></li>
+                <li><a href="reserva.html">Reserva</a></li>
+                <li><a href="#depoimento">Depoimento</a></li>
+                <li><a href="#pacotes">Pacotes</a></li>
+                <li><a href="#feed">Noticias</a></li>
+                <li><a href="#contact">Contato</a></li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+
+      </div>
+    </div>
+
+
+    <!-- Carousel
+    ================================================== -->
+    <div id="myCarousel" class="carousel slide" data-ride="carousel">
+      <!-- Indicators -->
+      <ol class="carousel-indicators">
+        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+        <li data-target="#myCarousel" data-slide-to="1"></li>
+        <li data-target="#myCarousel" data-slide-to="2"></li>
+      </ol>
+      <div class="carousel-inner" role="listbox">
+        <div class="item active">
+          <img class="first-slide" class="img-responsive"src="../imagens/p1.jpg" alt="First slide">
+          <div class="container">
+            <div class="carousel-caption">
+              <h1>Venha conhecer o Paraíso</h1>
+              <p>Faça sua reserva conosco e aproveite nossas promoções</p>
+              <p><a class="btn btn-lg btn-primary" href="reserva.html" role="button">Reservar</a></p>
+            </div>
+          </div>
+        </div>
+        <div class="item">
+          <img class="second-slide" class="img-responsive" src="../imagens/p2.jpg" alt="Second slide">
+          <div class="container">
+            <div class="carousel-caption">
+              <h1>Você precisa Relaxar?</h1>
+              <p> Então não perca tempo e venha tirar o estresse no melhor lugar e com o melhor preço</p>
+              <p><a class="btn btn-lg btn-primary" href="reserva.html" role="button">Reservar</a></p>
+            </div>
+          </div>
+        </div>
+        <div class="item">
+          <img class="third-slide"class="img-responsive" src="../imagens/p3.jpg">
+          <div class="container">
+            <div class="carousel-caption">
+              <h1>Gosta de lugares ameno?</h1>
+              <p>Faça logo sua reserva e garanta sua vaga nos melhores lugares para meditar, relaxar...</p>
+              <p><a class="btn btn-lg btn-primary" href="reserva.html" role="button">Reservar</a></p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+        <span class="sr-only">Voltar</span>
+      </a>
+      <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+        <span class="sr-only">Avançar</span>
+      </a>
+    </div><!-- /.carousel -->
+
+    <!--================================================== -->
+    <hr class="featurette-divider" id="depoimento">
+    <!-- Depoimentos de clientes-->
+
+    <div class="container marketing">
+      <!-- Depoimentos -->
+      <div class="row">
+        <div class="col-lg-4">
+          <img class="img-circle" class="img-responsive" src="../imagens/depoimento1.jpg" width="160" height="160">
+          <h2>Larissa</h2>
+          <p>"Recomendo a Agência Paraíso pois além de ótimos preços da total apoio aos clientes. Nota 1000 em atendimento, foi a melhor viagem da minha vida."</p>
+        </div><!-- /.col-lg-4 -->
+        <div class="col-lg-4">
+          <img class="img-circle" class="img-responsive" src="../imagens/depoimento2.jpg" width="160" height="160">
+          <h2>Antônio</h2>
+          <p>"Recomendo a Agência Paraíso pois além de ótimos preços da total apoio aos clientes. Nota 1000 em atendimento, foi a melhor viagem da minha vida."</p>
+        </div><!-- /.col-lg-4 -->
+        <div class="col-lg-4">
+          <img class="img-circle" class="img-responsive" src="../imagens/depoimento3.jpg" width="160" height="160">
+          <h2>Carlla</h2>
+          <p>"Recomendo a Agência Paraíso pois além de ótimos preços da total apoio aos clientes. Nota 1000 em atendimento, foi a melhor viagem da minha vida."</p>
+        </div><!-- /.col-lg-4 -->
+      </div><!-- /.row -->
+
+        <hr class="featurette-divider">
+      <!-- Inicio pacotes de viagem -->
+
+      <hr class="featurette-divider" id="pacotes">
+
+      <div class="row featurette">
+        <div class="col-md-7">
+          <h2 class="featurette-heading">Para toda família? <span class="text-muted">Temos diversão pra todos</span></h2>
+          <p class="lead">Viajar em família é sempre muito bom, mais devemos tomar todas as precauções possíveis para ter uma viagem inesquecível. Nós da Agência Paraíso temos os melhores destinos e todos já visitados por nossos agentes para realizar a viagem dos sonhos.</p>
+        </div>
+        <div class="col-md-5">
+          <img class="featurette-image img-responsive center-block" src="../imagens/Familia.jpg" >
+        </div>
+      </div>
+
+      <hr class="featurette-divider">
+
+      <div class="row featurette">
+        <div class="col-md-7 col-md-push-5">
+          <h2 class="featurette-heading">Viagem entre amigos? <span class="text-muted">Chama a galera e vem</span></h2>
+          <p class="lead">Viajar entre amigos é tudo de bom e nós da Agência Paraíso dos Sonhos temos os melhores destinos e pacotes para toda galera se divertir e gatar pouco.</p>
+        </div>
+        <div class="col-md-5 col-md-pull-7">
+          <img class="featurette-image img-responsive center-block" src="../imagens/amigos.jpg" >
+        </div>
+      </div>
+
+      <hr class="featurette-divider">
+
+      <div class="row featurette">
+        <div class="col-md-7">
+          <h2 class="featurette-heading">Quer viajar sozinho? <span class="text-muted">Temos os melhores destinos</span></h2>
+          <p class="lead">Viajar sozinho para relaxar é além incrível, um ecercício de autoconhecimento e para isso nós temos os lugares perfeitos pra você.</p>
+        </div>
+        <div class="col-md-5">
+          <img class="featurette-image img-responsive center-block" src="../imagens/individual.jpg" >
+        </div>
+      </div>
+
+      <hr class="featurette-divider" id="feed">
+      		<!-- Feed de noticias -->
+  	<div class="panel panel-primary" id="feed">
+      <div class="panel-heading ">Painel de Notícias G1</div>
+      <div class="panel-body">
+      <div class="feed"id="rss-feeds"></div>
+      </div>
+    </div>
+      <!-- /Fin pacotes de viagem-->
+      <hr class="featurette-divider">
+      <!-- FOOTER -->
+      <footer>
+        <p class="pull-right"><a href="#">Topo</a></p>
+        <p>&copy; 2016 Projeto JS &middot; <a href="#">Privacidade</a> &middot; <a href="#">Termos de uso</a></p>
+      </footer>
+
+    </div><!-- /.container -->
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  
+    <script src="http://getbootstrap.com/dist/js/bootstrap.min.js"></script>
+    <!-- Just to make our placeholder images work. Don't actually copy the next line! -->
+    <script src="http://getbootstrap.com/assets/js/vendor/holder.min.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="http://getbootstrap.com/assets/js/ie10-viewport-bug-workaround.js"></script>
+  </body>
+</html>

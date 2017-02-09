@@ -1,0 +1,227 @@
+<!--// Projeto final da disciplina Linguagem de Script
+// Equipe: Aluisio, Alexandre, Rosemberg, Wanderson Andrade
+// data: 29/03/2016
+// Professor: Daniel -->
+
+ <!DOCTYPE html>
+<html lang="pt">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+    <meta name="Projeto site de JavaScript" content="">
+    <meta name="Alexandre, CFO, Chapeuzin" content="">
+    <link rel="icon" href="../imagens/favicon.ico">
+
+    <title>Agência de viagens "Paraíso dos Sonhos"</title>
+
+    <link rel="stylesheet" type="text/css" href="../css/projeto_LS.css">
+     <link rel="stylesheet" type="text/css" href="../css/normalize.css">
+      <link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
+
+	  <script type="text/javascript" src="../js/projeto_LS1.js"></script>
+    <script type="text/javascript" src="../js/jquery-2.1.4.js"></script>
+    <script type="text/javascript" src="../js/feed2.js"></script>
+    <script type="text/javascript" src="../js/projeto_LS2.js"></script>
+    <script src="../js/jquery-2.1.4.js"></script>
+
+                <!-- Tooltip -->
+    <link rel="stylesheet" href="../css/jquery-ui.css">
+    <script src="../js/jquery-ui.js"></script>
+    <script src="../js/tooltip.js"></script>
+    <link rel="stylesheet" href="../css/tooltip.css">
+                     <!-- Tooltip -->
+
+                 <!-- Bootstrap core CSS -->
+    <link href="http://getbootstrap.com/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- IE10 resolver bug de interface desktop Windows 8  -->
+    <link href="http://getbootstrap.com/assets/css/ie10-viewport-bug-workaround.css" rel="stylesheet">
+    <script src="http://getbootstrap.com/assets/js/ie-emulation-modes-warning.js"></script>
+    <!-- customização de estilos para o template -->
+    <link href="http://getbootstrap.com/examples/carousel/carousel.css" rel="stylesheet">
+  <!-- ==================================================================-->
+
+  </head>
+<body>	
+ <div class="navbar-wrapper">
+      <div class="container">
+
+        <nav class="navbar navbar-inverse navbar-static-top">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="Index.html">Agência Paraíso</a>
+            </div>
+            <div id="navbar" class="navbar-collapse collapse">
+              <ul class="nav navbar-nav">
+                <li class="active"><a href="#">Home</a></li>
+                <li><a href="#contact">Contato</a></li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+        </div>
+      </div>
+      <!-- meu container -->
+<div class="container" >
+<!-- inicio formulario -->
+<form  class="col-md-8" >
+  <!-- campo suites e numero de hospedes-->
+  <fieldset > 
+  <legend id="form1" >Escolha da suite e quantidade de pessoas</legend>
+    <div>
+       <!--escolha da suite -->
+       <label for="suites">Suites</label>
+          <select class="form-control" name="suites" id="suites" >
+          <option>Escolha uma suite</option>
+          <option value="100.00">Standard-1</option>
+          <option value="150.00">Standard-2</option>
+          <option value="250.00">Luxo-1</option>
+          <option value="350.00">Luxo-2</option>
+          <option value="700.00">Presidencial</option>
+         </select><br>
+         
+         <!-- escolha do numero de adultos -->
+       <label for="adultos">Adultos</label>
+        <select class="form-control"name="adultos" id="adultos">
+        <option>Numero de adultos</option>
+          <option value="1">1</option>
+          <option value="1">2</option>
+          <option value="1.40">3</option>
+         </select>
+    </div>
+  </fieldset>
+	<!-- campos data inicio e fim da reserva -->
+			<fieldset id="date-content" >
+				<legend id="form2" >Periodo da reserva</legend>
+				<div>
+						<label for="data_inicio">Data inicio:</label>
+						<input id="data_inicio"  type="text" class="form-control"  placeholder="##/##/####"><br>
+							<label for="data__fim">Data fim:</label>
+						<input id="data_fim"  type="text" class="form-control"  placeholder="##/##/####"><br>
+				</div>
+		</fieldset>
+
+<!-- dados do cliente -->
+   <fieldset>
+			<legend id="form2">Dados do titular da reserva</legend>
+        <div>
+					<label for="nome">Nome:</label>
+						<input  id="nome" onchange="validarNome()" class="form-control" type="text"  placeholder="Nome completo"><br>
+					<label for="rua">Rua:</label>
+						<input id="rua" onchange="validarRua()" type="text" class="form-control"  placeholder="Rua em que reside"><br>
+					<label for="numero">Número:</label>
+						<input id="numero" onchange="validarNumero()" type="text" class="form-control"  placeholder="Numero de sua residência"><br>
+					<label for="cep">Cep:</label>
+						<input id="cep" onchange="validarCep()" type="text" class="form-control"  placeholder="Informe seu Cep!"><br>
+					<label for="telefone">Telefone:</label>
+						<input id="fone" type="text" class="form-control fone1"  placeholder="(##)#####-#### ou (##)####-####"><br>
+				<br>
+			</div>
+			<div id="estados">
+				<label for="estados">Estado</label>
+				<SELECT class="form-control" onchange="criarCidades(this)">
+					<option>Escolha o Estado</option>
+					<option value="0">PB</option>
+					<option value="1">PE</option>
+					<option value="2">RJ</option>
+					<option value="3">RN</option>
+					<option value="4">SP</option>
+				</SELECT>
+        </div><br>
+        <div id="">
+				<label for="">Cidades</label>
+				<SELECT class="form-control" id="cidades">
+          <option>Escolha a cidade</option>
+        </SELECT>
+			</div><br>
+        
+        <fieldset id="addFone">
+          <label for="telefone">Telefone</label>
+           <a href="" id="novoFone" class="">+ Adicionar</a>
+          <input class="form-control valid_fone" type="text" placeholder="(##)#### - #### ou (##)##### - ####"\>
+         
+        </fieldset>
+
+      </fieldset>
+
+      <!-- serviços adicionais-->
+			<div id="servicos">
+				<legend id="form2">Serviços Adicionais</legend>
+        <fieldset >
+        <div>
+       <input for="transp" type="checkbox" id="transp" name="transporte" value="T"/>Serviço de Transporte
+      <img data-toggle="popover" data-placement="right" data-content="Content" class="img-rounded" alt="Cinque Terre" width="100" height="50" id="img_transp" class="icone" src="../imagens/transporte.jpg" name="firstname" title="Este serviço custa R$ 250,00 extra ao da reserva."><br>
+    </div>
+     <div>
+       <input for="transp" id="lav" type="checkbox" name="transporte" value="T"/>Serviço de Lavanderia
+      <img data-toggle="popover" data-placement="right" data-content="Content" class="img-rounded" alt="Cinque Terre" width="100" height="50" class="img-rounded" alt="Cinque Terre" width="100" height="50" id="img_lav" class="icone " src="../imagens/lavanderia.jpg" name="img_lav" title="Este serviço custa R$ 200,00 extra ao da reserva."><br>
+      <p class="text">*Posicione o mouse sobre a imagem para uma descrição e preço do serviço adicional ofertado.</p>
+    </div>
+    <!-- ===============================================-->
+
+    <!-- =============== Campos de pagamento =================-->
+     <fieldset>
+        <legend id="form2"> Aceitamos os cartões</legend>
+
+        <!-- cartoes que aceita -->
+    <p>
+      <img src="../imagens/logo_visa.svg"  height="43" width="67" id="visa" />
+      <img src="../imagens/mastercard.gif" alt="" name="irc_mi2" width="67" height="43" id="irc_mi2" id="mastercard" />
+      <img src="../imagens/American_Express.png" alt="" name="irc_mi3" width="67" height="43" id="America_Express" /></p> <br>
+
+    <!-- inserir os dados do cartao -->
+    <label for="num_cartao">Número do cartão</label>
+        <input class="form-control" type="text" id="num_cartao">
+        <img id="img_cartao"  src="../imagens/blank.png">
+
+        <label for="titular_cart">Nome do Titular do cartão</label>
+        <input class="form-control" type="text" id="titular_cart">
+
+        <label for="validade_cart">Data da Validade do cartão</label>
+        <input class="form-control"type="text" id="validade_cart" placeholder=" mm/aaaa">
+
+        <label for="cod_seg">Código de Segurança</label>
+        <input class="form-control" type="text" id="cod_seg"><br>
+        <button id="enviar" class="btn btn-primary btn-lg">Resumo da compra</button>
+      </fieldset>
+        </div>
+			</form>	
+
+      <div id="form1" class="col-md-4">
+      <div class="col-md-12">
+        <div  class="panel panel-default">
+          <!-- Default panel contents -->
+          <div  class="panel-heading">UOL Noticias</div>
+          <!-- Table -->
+          <table id="feed2" class="table">
+            
+          </table>
+        </div>
+      </div>
+    </div>
+ </div><!-- /.container -->
+  <br>
+		 <!-- FOOTER -->
+      <footer>
+        <p class="pull-right"><a href="#">Topo</a></p>
+        <p>&copy; 2016 Projeto JS &middot; <a href="#">Privacidade</a> &middot; <a href="#">Termos de uso</a></p>
+      </footer>
+
+  
+
+
+    <!-- Bootstrap core JavaScript
+   
+    <!-- Just to make our placeholder images work. Don't actually copy the next line! -->
+    <script src="http://getbootstrap.com/assets/js/vendor/holder.min.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="http://getbootstrap.com/assets/js/ie10-viewport-bug-workaround.js"></script>
+  </body>
+</html>

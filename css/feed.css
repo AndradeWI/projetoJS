@@ -1,0 +1,30 @@
+/*<!-- Feed de noticias --> 
+   // Projeto final da disciplina Linguagem de Script
+ // Equipe: Aluisio, Alexandre, Rosemberg, Wanderson Andrade
+// data: 29/03/2016
+// Professor: Daniel */
+
+/* estiliza o feed do index*/
+    .feed  a {
+        color: #37D;
+        text-decoration: none;
+      }
+     .feed a:hover {
+        text-decoration: underline;
+      }
+     .feed ul {
+        list-style-type: none;
+        margin: 0px;
+        padding: 0px;
+      }
+     .feed li {
+        padding: 10px;
+        border-top: 1px dashed #AAA;
+        background-color: #EFEFEF;
+      }
+     .feed li:first-child {
+        border-top: none;
+      }
+     .feed li:nth-child(2n) {
+        background-color: white;
+      }
